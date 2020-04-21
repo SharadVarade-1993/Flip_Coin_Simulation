@@ -21,7 +21,7 @@ function sortingArray() {
 	do
 		for(( j=$((count+1)); j<${#sortArray[@]}; ++j ))
 		do
-			if[ ${sortArray[count]} -lt ${sortArray[j]} ];
+			if [ ${sortArray[count]} -lt ${sortArray[j]} ];
 			then
 					temp=${sortArray[count]}
 					sortArray[count]=${sortArray[j]}
@@ -43,7 +43,7 @@ function sortAllCombination() {
 	sortingArray
 	for key in ${percentage[@]}
 	do
-		if[ ${sortArray[0]} -eq ${percentage[$key]} ];
+		if [ ${sortArray[0]} -eq ${percentage[$key]} ];
 		then
 				winningCombination=$key
 				break
@@ -109,7 +109,7 @@ function storeTripletCombination(){
 	do
 		count=0
 		result=""
-		while[ $count != 3 ]
+		while [ $count != 3 ]
 		do
 		    result+=$( flipCoin )
 		    ((count++))
